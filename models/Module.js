@@ -8,15 +8,9 @@ const ModuleSchema = new Schema({
     trim: true
   },
 
-  course: {
+  moduleItems: [{
     type: Schema.Types.ObjectId,
-    ref: 'Course',
-    required: true
-  },
-
-  notes: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Note'
+    ref: 'ModuleItem',
   }]
 }, {
   timestamps: true

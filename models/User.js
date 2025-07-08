@@ -12,14 +12,20 @@ const UserSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    lowercase: true
+    lowercase: true,
+    match: [/^\S+@\S+\.\S+$/, 'Email format invalid']
   },
 
   password: {
     type: String,
-    required: true
+    required: true,
+    minlength: 8,
+    match: [
+    /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+    'Password must contain at least one letter and one number'
+  ]
   },
-
+ 
   courses: [{
     type: Schema.Types.ObjectId,
     ref: 'Course'

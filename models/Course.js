@@ -19,14 +19,14 @@ const CourseSchema = new Schema({
     required: true
   },
 
-  modules: [{
+  moduleItems: [{
     type: Schema.Types.ObjectId,
-    ref: 'Module'
+    ref: 'ModuleItem'
   }],
 
-  resumes: [{
+  summaries: [{
     type: Schema.Types.ObjectId,
-    ref: 'Resume'
+    ref: 'Summary'
   }]
 }, {
   timestamps: true

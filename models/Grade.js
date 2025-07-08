@@ -14,9 +14,9 @@ const GradeSchema = new Schema({
     trim: true
   },
 
-  module: {
+  moduleItem: {
     type: Schema.Types.ObjectId,
-    ref: 'Module',
+    ref: 'ModuleItem',
     required: true
   }
 }, {
