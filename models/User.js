@@ -35,9 +35,9 @@ const UserSchema = new Schema({
     ref: 'Statistic'
   }],
 
-  resumes: [{
+  summaries: [{
     type: Schema.Types.ObjectId,
-    ref: 'Resume'
+    ref: 'Summary'
   }]
 }, {
   timestamps: true

@@ -17,7 +17,10 @@ const TaskSchema = new Schema({
     type: Boolean,
     default: false
   },
-
+  label:{ 
+    type: [String],
+    default:[]
+  },
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
